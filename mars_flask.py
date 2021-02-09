@@ -18,7 +18,7 @@ def home():
 def scrape():
   
     mars_data = scrape_mars.scrape()
-    mars_dict.update({}, mars_data, upsert=True)
+    home_data.update({}, mars_data, upsert=True)
     return redirect("/")
 
 if __name__ == "__main__":
