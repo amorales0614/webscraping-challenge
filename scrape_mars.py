@@ -8,6 +8,7 @@ import pymongo
 def init_browser():
     executable_path = {'executable_path': 'C:/webdrivers/chromedriver.exe'}
     browser = Browser('chrome', **executable_path, headless=False)
+    return browser
 
 def scrape():
     browser = init_browser()
@@ -88,4 +89,7 @@ def scrape():
         "hemisphere_images": hemi_links
     }
 
+    browser.quit()
+
     return mars_dict
+
